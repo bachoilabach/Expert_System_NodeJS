@@ -14,7 +14,7 @@ app.use(
 require('./dbs/init.mongodb');
 
 // init routes
-// app.use('/', require('./routes'));
+app.use('/', require('./routes'));
 
 // handling error
 app.use((error, req, res, next) => {
