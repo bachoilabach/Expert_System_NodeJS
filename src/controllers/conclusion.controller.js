@@ -28,7 +28,7 @@ class ConclusionController {
     deleteConclusion = async (req, res, next) => {
         new SuccessResponse({
             message: "delete conclusion success",
-            metadata: await ConclusionService.deleteEvent(req.params.conclusionId)
+            metadata: await ConclusionService.deleteConclusion(req.params.conclusionId)
         }).send(res);
     }
 }

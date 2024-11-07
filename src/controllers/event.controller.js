@@ -11,6 +11,14 @@ class EventController {
         }).send(res);
     }
 
+    getEventById = async (req, res, next) => {
+    
+        new SuccessResponse({
+            message: "get event success",
+            metadata: await EventService.getEventById(req.params.eventId)
+        }).send(res);
+    }
+
     createEvent = async (req, res, next) => {
         new CreatedResponse({
             message: "Create event success",
@@ -26,6 +34,7 @@ class EventController {
     }
 
     deleteEvent = async (req, res, next) => {
+        console.log(req.params.eventId)
         new SuccessResponse({
             message: "delete event success",
             metadata: await EventService.deleteEvent(req.params.eventId)

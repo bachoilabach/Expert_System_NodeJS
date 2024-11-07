@@ -6,6 +6,7 @@ const conclusionController = require('../controllers/conclusion.controller');
 const router = express.Router();
 //Event
 router.get("/api/events", asyncHandler(eventController.getAllEvent));
+router.get('/api/event/:eventId',asyncHandler(eventController.getEventById))
 router.post("/api/event", asyncHandler(eventController.createEvent));
 router.put("/api/event/:eventId", asyncHandler(eventController.updateEvent));
 router.delete("/api/event/:eventId", asyncHandler(eventController.deleteEvent));
