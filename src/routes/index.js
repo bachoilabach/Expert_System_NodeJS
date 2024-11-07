@@ -19,6 +19,7 @@ router.delete("/api/rule/:ruleId", asyncHandler(ruleController.deleteRule));
 //Conclusion
 
 router.get("/api/conclusions", asyncHandler(conclusionController.getAllConclusion));
+router.get('/api/conclusion/:conclusionId',asyncHandler(conclusionController.getConclusionById))
 router.post("/api/conclusion", asyncHandler(conclusionController.createConclusion));
 router.put("/api/conclusion/:conclusionId", asyncHandler(conclusionController.updateConclusion));
 router.delete("/api/conclusion/:conclusionId", asyncHandler(conclusionController.deleteConclusion));

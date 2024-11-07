@@ -13,8 +13,8 @@ const parseDescriptionToEventsAndConclusion = (description) => {
 
 const isSubset = (subset, set) => {
     console.log("SUBSET::", subset);
-    console.log("SET::", set);
-    return subset.events.every(event => set.includes(event));
+    console.log("SET::", set.events);
+    return subset.every(event => set.events.includes(event));
 }
 
 module.exports = {

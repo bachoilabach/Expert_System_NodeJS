@@ -12,7 +12,6 @@ class EventController {
     }
 
     getEventById = async (req, res, next) => {
-    
         new SuccessResponse({
             message: "get event success",
             metadata: await EventService.getEventById(req.params.eventId)

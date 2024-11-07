@@ -11,6 +11,13 @@ class ConclusionController {
         }).send(res);
     }
 
+    getConclusionById = async (req, res, next) => {
+        new SuccessResponse({
+            message: "get conclusion success",
+            metadata: await ConclusionService.getConclusionById(req.params.conclusionId)
+        }).send(res);
+    }
+
     createConclusion = async (req, res, next) => {
         new CreatedResponse({
             message: "Create conclusion success",

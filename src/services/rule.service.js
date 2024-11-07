@@ -78,7 +78,7 @@ class RuleService {
             const { events, conclusion } = rule.parsedDescription;
             console.log({ events, conclusion });
             // return isSubset(events, eventData);
-            return isSubset(eventData, events);
+            return isSubset(events, eventData);
         });
 
         const foundConclusion = conclusionModel.findOne({conclusionId: matchingRule.parsedDescription.conclusion});
