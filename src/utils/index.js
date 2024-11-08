@@ -1,7 +1,7 @@
 'use strict';
 
 const formatDescription = (description, klValue) => {
-    return `(${description.join('^')}) → ${klValue}`;
+    return `(${description.join(' ∧ ')}) → ${klValue}`;
 }
 
 const parseDescriptionToEventsAndConclusion = (description) => {
@@ -10,11 +10,10 @@ const parseDescriptionToEventsAndConclusion = (description) => {
     const conclusion = conclusionPart;
     return { events, conclusion };
 }
-
 const isSubset = (subset, set) => {
     console.log("SUBSET::", subset);
-    console.log("SET::", set.events);
-    return subset.every(event => set.events.includes(event));
+    console.log("SET::", set);
+    return subset.every(event => set.includes(event));
 }
 
 module.exports = {
